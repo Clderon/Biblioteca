@@ -1,0 +1,8 @@
+# Redirigir todas las solicitudes a la carpeta public
+
+# Habilitar el motor de re escritura
+RewriteEngine On
+
+# Evitar bucles de re dirección si ya estamos en la carpeta public
+RewriteCond %{REQUEST_URI} !^/Biblioteca/public/
+RewriteRule ^(.*)$ public/$1 [L]
