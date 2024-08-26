@@ -1,0 +1,145 @@
+/* Resetear márgenes y paddings predeterminados */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+/* Estilos generales para el header */
+header {
+  background-color: #35424a; /* Fondo del header */
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para el header */
+}
+
+/* Estilos para el nav */
+nav {
+  max-width: 1100px;
+  margin: 0 auto; /* Centra el contenido dentro del header */
+  padding: 0 20px;
+}
+
+/* Estilos para la lista del menú de navegación */
+nav ul {
+  list-style-type: none; /* Elimina los puntos de la lista */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Coloca los elementos en línea */
+  justify-content: center; /* Alinea los elementos a la centro */
+}
+
+/* Estilos para los ítems del menú */
+nav ul li {
+  margin-left: 20px; /* Espacio entre los elementos del menú */
+}
+
+/* Estilos para los enlaces del menú */
+nav ul li a {
+  color: #ffffff; /* Color del texto */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 18px;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease; /* Animación suave para el fondo */
+}
+
+/* Estilos para el hover de los enlaces del menú */
+nav ul li a:hover {
+  background-color: #e8491d; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos responsivos para dispositivos móviles */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos en la pantalla */
+  }
+  nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px; /* Espacio entre los elementos del menú en móvil */
+  }
+}
+
+/* Estilo de la sección de bienvenida */
+#welcome {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#welcome h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+#welcome p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+#welcome .actions {
+  margin-top: 20px;
+}
+
+#welcome .actions .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px;
+  background: #35424a;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+#welcome .actions .btn:hover {
+  background: #e8491d;
+}
+
+/* Estilo de las secciones de contenido */
+section {
+  margin-top: 50px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #35424a;
+}
+
+section p,
+section ul {
+  font-size: 18px;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+section ul {
+  list-style-type: none;
+}
+
+section ul li {
+  margin: 10px 0;
+}
+
+/* Estilo del pie de página */
+footer {
+  margin-top: 50px;
+  padding: 20px 0;
+  background: #35424a;
+  color: #ffffff;
+  text-align: center;
+}
+
+footer p {
+  font-size: 16px;
+}

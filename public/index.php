@@ -1,19 +1,15 @@
 <?php
 
-// Cargar el archivo bootstrap.php para inicializar la aplicación
-require_once __DIR__ . '/../config/bootstrap.php';
-
-
-// El resto de tu aplicación (rutas, controladores, etc.)
-
-// Definir la ruta base
+// Definir la ruta base del proyecto
 define('BASE_PATH', dirname(__DIR__));
 
-// Cargar el controlador AuthController
-require_once BASE_PATH . '/app/Controllers/AuthController.php';
+// Habilitar la visualización de errores (solo en desarrollo)
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-// Crear una instancia del controlador y manejar la solicitud
-$controller = new App\Controllers\AuthController();
 
-// Llamar al método correspondiente en el controlador
-$controller->showLogin();
+// Incluir archivos de configuración
+require_once BASE_PATH . '/config/bootstrap.php';
+require_once BASE_PATH . '/config/routes.php';
+

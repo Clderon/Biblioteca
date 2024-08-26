@@ -1,8 +1,8 @@
-# Redirigir todas las solicitudes a la carpeta public
-
-# Habilitar el motor de re escritura
 RewriteEngine On
 
-# Evitar bucles de re dirección si ya estamos en la carpeta public
+# Redirigir todas las solicitudes que no sean archivos o directorios existentes a la carpeta public
 RewriteCond %{REQUEST_URI} !^/Biblioteca/public/
-RewriteRule ^(.*)$ public/$1 [L]
+
+
+# Redirigir todas las solicitudes a public/index.php
+RewriteRule ^(.*)$ public/index.php [L]
