@@ -1,5 +1,4 @@
 <?php
-
 // Definir la ruta base del proyecto
 define('BASE_PATH', dirname(__DIR__));
 
@@ -13,3 +12,5 @@ error_reporting(E_ALL);
 require_once BASE_PATH . '/config/bootstrap.php';
 require_once BASE_PATH . '/config/routes.php';
 
+$router = new Router();
+$router->run();

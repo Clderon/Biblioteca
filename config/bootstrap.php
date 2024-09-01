@@ -1,5 +1,22 @@
 <?php
 
+$folderPath = $_SERVER['SCRIPT_NAME'];
+$urlPath = $_SERVER['REQUEST_URI'];
+$url = substr($urlPath, 11);
+
+
+define('URL', $url);
+
+// echo "<p>";
+// // var_dump($folderPath);
+// echo "</p>";
+// echo "<p>";
+// // var_dump($urlPath);
+// echo "</p>";
+// echo "<p>";
+// // var_dump($url);
+// echo "</p>";
+
 // Función para cargar las variables del archivo .env
 function loadEnv($path)
 {
@@ -19,5 +36,3 @@ function loadEnv($path)
 
 // Cargar variables de entorno desde el .env
 loadEnv(__DIR__ . '/../.env');
-
-// otras configuraciones iniciales

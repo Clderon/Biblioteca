@@ -16,6 +16,25 @@ class AuthController
         }
     }
 
+    public function showRegister()
+    {
+        $viewPath = BASE_PATH . '/app/Views/auth/register.php';
+        if (file_exists($viewPath)) {
+            require_once $viewPath;
+        } else {
+            echo "La vista de login no se encontró.";
+        }
+    }
+
+    public function showForgotPassword()
+    {
+        $viewPath = BASE_PATH . '/app/Views/auth/forgot_password.php';
+        if (file_exists($viewPath)) {
+            require_once $viewPath;
+        } else {
+            echo "La vista de login no se encontró.";
+        }
+    }
 
     public function login()
     {
@@ -81,5 +100,4 @@ class AuthController
         // Cargar la vista del home
         require_once BASE_PATH . '/app/Views/home.php';
     }
-
 }
